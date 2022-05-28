@@ -1,0 +1,21 @@
+version: "3.5"
+
+services:
+  rabbitmq:
+   image: rabbitmq:3-management
+   container_name: rabbitmq-container
+   ports:
+    - 5672:5672
+    - 15672:15672
+   volumes:
+    - volrabbitmq:/var/lib/rabbitmq
+    - volrabbitmq:/var/log/rabbitmq
+   networks:
+    - rabbitmqnetwork
+
+volumes:
+  volrabbitmq:
+
+networks:
+ rabbitmqnetwork:
+  driver: bridge
