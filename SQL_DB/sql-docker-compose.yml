@@ -6,7 +6,7 @@ services:
     ports:
       - 1433:1433
     volumes:
-      - volmysql:/var/lib/mssqlql/data
+      - volsql:/var/lib/mssqlql/data
     environment:
       - ACCEPT_EULA=Y
       - SA_PASSWORD=Admin_123
@@ -17,4 +17,4 @@ networks:
   sqlnetwork:
 
 volumes:
-  volmysql:
+  volsql:
