@@ -1,0 +1,11 @@
+//Cek All Format
+docker inspect -f id_container
+//Cek IP Container
+docker inspect id_container | findstr "IPAddress"
+// Cek Port
+docker inspect id_container | findstr "HostPort"
+
+
+**REDIS
+// login username for redisinlight 
+- default

@@ -3,10 +3,25 @@ version: "3.7"
 services:
   redis:
     image: redislabs/redismod
+    container_name: redis-container
+    environment:
+      - REDIS_PASSWORD=Admin_123
     ports:
       - "6379:6379"
+    volumes:
+      - volredis:/data
+    networks:
+      - redisnetwork
   
   redisinsight:
     image: redislabs/redisinsight:latest
     ports:
-      - "6060:80"
+      - "8001:8001"
+    networks:
+      - redisnetwork
+  
+networks:
+  redisnetwork:
+
+volumes:
+  volredis:
