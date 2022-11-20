@@ -4,17 +4,20 @@ services:
   rabbitmq:
    image: rabbitmq:3-management
    container_name: rabbitmq-container
+   restart: always
    ports:
     - 5672:5672
     - 15672:15672
    volumes:
-    - volrabbitmq:/var/lib/rabbitmq
-    - volrabbitmq:/var/log/rabbitmq
+    # - volrabbitmq:/var/lib/rabbitmq
+    # - volrabbitmq:/var/log/rabbitmq
+    - /root/rabbitmq:/var/lib/rabbitmq
+    - /root/rabbitmq:/var/log/rabbitmq
    networks:
     - rabbitmqnetwork
 
-volumes:
-  volrabbitmq:
+# volumes:
+#   volrabbitmq:
 
 networks:
  rabbitmqnetwork:

@@ -2,10 +2,12 @@ services:
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2019-latest
     container_name: sql-container
+    restart: always
     ports:
       - 1433:1433
     volumes:
-      - volsql:/var/lib/mssqlql/data
+      # - volsql:/var/lib/mssqlql/data
+      - /root/sqlserver:/var/lib/mssqlql/data
     environment:
       - ACCEPT_EULA=Y
       - SA_PASSWORD=Admin_123
@@ -15,5 +17,5 @@ services:
 networks:
   sqlnetwork:
 
-volumes:
-  volsql:
+# volumes:
+#   volsql:
