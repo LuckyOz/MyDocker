@@ -6,7 +6,8 @@ services:
     ports:
       - 1433:1433
     volumes:
-      - /var/lib/mssql/data:/var/lib/mssql/data
+      - /root/mssql/data:/var/lib/mssql/data
+      # - /var/lib/mssql/data:/var/lib/mssql/data
       # for file backup
       # sudo chmod 777 /root/sqlserver
       # sudo a+r /root/sqlserver
