@@ -6,16 +6,10 @@ services:
     ports:
       - 1433:1433
     volumes:
-      # - volsql:/var/lib/mssqlql/data
-      - /root/sqlserver:/var/lib/mssqlql/data
+      - /var/lib/mssql/data:/var/lib/mssql/data
+      # for file backup
+      # sudo chmod 777 /root/sqlserver
+      # sudo a+r /root/sqlserver
     environment:
       - ACCEPT_EULA=Y
       - SA_PASSWORD=Admin_123
-    networks:
-      - sqlnetwork
-
-networks:
-  sqlnetwork:
-
-# volumes:
-#   volsql:

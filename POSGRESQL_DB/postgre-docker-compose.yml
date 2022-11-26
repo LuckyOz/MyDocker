@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
   postgres:
-    image: postgres:latest
+    image: postgres:14
     container_name: postgres-container
     restart: always
     ports:
@@ -13,30 +13,4 @@ services:
       POSTGRES_PASSWORD: Admin_123
       PGDATA: /var/lib/postgresql/data
     volumes:
-      #  - volpostgres:/var/lib/postgresql/data
-      - /root/postgres:var/lib/postgresql/data
-    # networks:
-    #   - postgresnetwork
-  
-  # pgadmin:
-  #   image: dpage/pgadmin4
-  #   container_name: pgadmin
-  #   restart: always
-  #   ports:
-  #     - "5050:80"
-  #   environment:
-  #     PGADMIN_DEFAULT_EMAIL: fauzipratama11@gmail.com
-  #     PGADMIN_DEFAULT_PASSWORD: admin123
-  #     PGADMIN_CONFIG_SERVER_MODE: 'False'
-  #   volumes:
-  #      - volpgadmin:/var/lib/pgadmin
-  #   networks:
-  #     - postgresnetwork
-    
-# networks:
-#   postgresnetwork:
-
-# volumes:
-#     volpostgres:
-#     volpgadmin:
-    
+      - /var/lib/postgresql/data:var/lib/postgresql/data

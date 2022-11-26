@@ -1,4 +1,4 @@
-version: "3.7"
+version: "3.5"
 
 services:
   mysql:
@@ -10,8 +10,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: Admin_123
     volumes:
-      # - volmysql:/var/lib/mysql
-      - /root/mysql/:/var/lib/mysql
+      - /var/lib/mysql:/var/lib/mysql
     networks:
       - mysqlnetwork
     
@@ -29,6 +28,3 @@ services:
     
 networks:
   mysqlnetwork:
-
-# volumes:
-#   volmysql:
