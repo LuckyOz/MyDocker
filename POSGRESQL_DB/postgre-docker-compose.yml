@@ -13,5 +13,5 @@ services:
       POSTGRES_PASSWORD: Admin_123
       PGDATA: /var/lib/postgresql/data
     volumes:
-      - /root/postgresql/data:var/lib/postgresql/data
+      - /root/postgresql/data:/var/lib/postgresql/data
       # - /var/lib/postgresql/data:var/lib/postgresql/data
