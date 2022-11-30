@@ -11,8 +11,6 @@ services:
    volumes:
     - /root/rabbitmq/data:/var/lib/rabbitmq
     - /root/rabbitmq/log:/var/log/rabbitmq
-    # - /var/lib/rabbitmq:/var/lib/rabbitmq
-    # - /var/log/rabbitmq:/var/log/rabbitmq
    networks:
     - rabbitmqnetwork
 
