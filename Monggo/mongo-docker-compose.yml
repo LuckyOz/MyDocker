@@ -13,7 +13,7 @@ services:
     volumes:
       - /root/mongodb/data/db:/data/db
       - /root/mongodb/dev.archive:/data/dev.archive
-      - /root/production:/data/production
+      - /root/mongodb/production:/data/production
   # mongo-express:
   #   image: mongo-express
   #   container_name: mexpress-container
