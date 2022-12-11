@@ -11,9 +11,9 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - ./root/mongodb/data/db:/data/db
-      - ./root/mongodb/dev.archive:/data/dev.archive
-      - ./root/production:/data/production
+      - /root/mongodb/data/db:/data/db
+      - /root/mongodb/dev.archive:/data/dev.archive
+      - /root/production:/data/production
   # mongo-express:
   #   image: mongo-express
   #   container_name: mexpress-container

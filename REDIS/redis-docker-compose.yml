@@ -11,15 +11,15 @@ services:
       - "6379:6379"
     volumes:
       - /root/redis/data:/data
-    networks:
-      - redisnetwork
+#     networks:
+#       - redisnetwork
   
-  redisinsight:
-    image: redislabs/redisinsight:latest
-    ports:
-      - "8001:8001"
-    networks:
-      - redisnetwork
+#   redisinsight:
+#     image: redislabs/redisinsight:latest
+#     ports:
+#       - "8001:8001"
+#     networks:
+#       - redisnetwork
 
-networks:
-  redisnetwork:
+# networks:
+#   redisnetwork:
