@@ -7,7 +7,7 @@ services:
     environment:
         - MONGO_INITDB_ROOT_USERNAME=mongod
         - MONGO_INITDB_ROOT_PASSWORD=Admin_123
-    restart: unless-stopped
+    # restart: unless-stopped
     ports:
       - "27017:27017"
     volumes:
